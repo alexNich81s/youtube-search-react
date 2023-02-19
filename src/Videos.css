@@ -1,0 +1,11 @@
+.videos_list{
+    justify-content: center;
+}
+.description{
+    font-size: smaller;
+}
+.video-item{
+    width: 300px; 
+    margin: 10px; /* Space between videos */
+    position: relative;
+}

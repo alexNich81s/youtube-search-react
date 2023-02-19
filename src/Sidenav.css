@@ -1,0 +1,33 @@
+.sidenav{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    z-index: 100;
+    flex: .2;
+    background-color: #fff;
+    
+}
+.sidenav-item.active{
+    background-color: #9e9e9e99;
+}
+.sidenav-items{
+    justify-content: flex-start;
+    width: 50%;
+    padding: 5px 0px;
+    
+}
+.sidenav-items a{
+    text-decoration: none;
+    margin-top: 10%;
+    margin-left: 10%;
+    color: black;
+
+}
+.sidebar-items a:hover{
+    background-color: black;
+    color: white;
+}
+.open{
+    margin-left: -255px;
+}
