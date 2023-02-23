@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import "./Videos.css";
 import "./Header.js";
 
-const my_API = "AIzaSyB8LTFV_8Hf5uPzbzoUNExSv82AU_2G9aU"
 
 
-const API_KEY = my_API;
+
+const API_KEY = process.env.REACT_APP_YOUTUBE_DATA_API_KEY;
 
 // Function to get YouTube videos
 function Videos({inputValue}) {
