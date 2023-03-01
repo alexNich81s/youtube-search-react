@@ -7,15 +7,26 @@
 }
 body{
   width: 65%;
-  background-color: rgb(182, 182, 182);
+  background-color: rgb(56, 56, 56);
   font-family:'Courier New', Courier, monospace;
 }
 li{
   overflow: hidden;
   font-size: 20px;
 }
+p{
+  color: white;
+}
+li a{
+  text-decoration: none;
+}
+li a:hover{
+  color: cyan;
+  text-decoration: blue;
+}
 .white{
   color:rgb(255, 255, 255);
+  
   
 }
 .black{

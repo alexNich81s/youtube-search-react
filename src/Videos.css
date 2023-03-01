@@ -2,10 +2,25 @@
     justify-content: center;
 }
 .description{
-    font-size: smaller;
+    font-size: 75%;
 }
 .video-item{
-    width: 300px; 
-    margin: 10px; /* Space between videos */
+    width: 300px;
+    margin: 10%; /* Space between videos */
     position: relative;
+    background-color: gray;
+    align-items: center;
+}
+.video-item:hover{
+    background-color: lightgray;
+}
+ul {
+    margin: 0 auto;
+    text-align: center;
+    columns: 2;
+}
+
+li {
+    display: inline-block;
+    vertical-align: top;
 }

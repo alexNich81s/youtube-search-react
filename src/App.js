@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <Header inputValue={inputValue} setInputValue={setInputValue}/>
       <div className="main-display" style={{"display" : "flex"}}></div>
-      <Sidenav/>
       <Videos inputValue={inputValue}/>
     </div>
   )
