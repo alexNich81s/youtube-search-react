@@ -19,6 +19,7 @@ input.search-box{
     border: 1px solid #607d8b80;
     margin: 0px 10px;
     padding: 0px 10px;
+    float: right;
 }
 .search-box{
     width: 20px;
@@ -26,8 +27,19 @@ input.search-box{
     right: 1%;
     top: 0%;
     border-left: 1px solid #607d8b80;
- 
+    float: right;
+}
+.site-name{
+    text-decoration: none;
 }
 .site-name a{
     text-decoration: none;
+    color: white;
+    background-color: black;
+    text-decoration-style: none;
+
+}
+.w3-container{
+    padding-top: 10%;
+    padding-right: 5px;
 }

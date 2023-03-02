@@ -17,7 +17,7 @@ function Videos({inputValue}) {
     const query = inputValue;
 
     // Fetch the data from the YouTube API
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${inputValue}&type=video&key=${API_KEY}`);
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${inputValue}&type=video&key=${API_KEY}`);
     const data = await response.json();
 
     // Extract the video information from the data
@@ -28,6 +28,7 @@ function Videos({inputValue}) {
             description: item.snippet.description,
             thumbnail: item.snippet.thumbnails.default.url,
         };
+   
     });
 
     // Set the videos state
@@ -43,7 +44,7 @@ return (
         <ul>
             {
                 videos.map(video => (
-                    <div className="video-item">
+                    <div className="video-item align-items-center w3-card">
                     <li key={video.videoId}>
                         <a href={`https://www.youtube.com/watch?v=${video.videoId}`}>
                             <img src={video.thumbnail} alt={video.title} />
@@ -62,3 +63,5 @@ return (
 
 // Call the getVideos function
 export default Videos;
+
+
