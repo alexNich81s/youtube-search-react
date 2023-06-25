@@ -44,12 +44,12 @@ return (
         <ul>
             {
                 videos.map(video => (
-                    <div className="video-item align-items-center w3-card">
+                    <div className="video-item w3-card">
                     <li key={video.videoId}>
                         <a href={`https://www.youtube.com/watch?v=${video.videoId}`}>
-                            <img src={video.thumbnail} alt={video.title} />
+                            <img className="video-thumbnail" src={video.thumbnail} alt={video.title} />
                             
-                            <p>{video.title}</p>
+                            <p className="video-title">{video.title}</p>
                         </a>
                             
                         <p className="description">{video.description}</p>
