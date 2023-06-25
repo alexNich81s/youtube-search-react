@@ -4,20 +4,31 @@
 .description{
     font-size: 75%;
 }
+.video-title{
+    color: black;
+}
+.video-thumbnail{
+    align-items: center;
+}
 .video-item{
-    width: 300px;
-    margin: 10%; /* Space between videos */
-    position: relative;
+    width: 75%;
+    margin: 25px; /* Space between videos */
+    position: static;
     background-color: gray;
     align-items: center;
+}
+.video-description{
+    align-items: left;
+    text-align: left;
 }
 .video-item:hover{
     background-color: lightgray;
 }
 ul {
     margin: 0 auto;
-    text-align: center;
-    columns: 2;
+    text-align: left;
+    columns: 3;
+    
 }
 
 li {
