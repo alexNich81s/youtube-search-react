@@ -1,15 +1,18 @@
 
-function Header({inputValue, setInputValue}){
+import React, { useState } from 'react';
+
+function Header({ onSearch }){
+    const [inputValue, setInputValue] = useState("");
+
     const handleChange = (e) => {
-        setInputValue(e.target.value)
-    }
-    const handleSubmit = (event) =>{
-        const updatedInputVal = setInputValue(inputValue)
-        event.preventDefault();
-        return updatedInputVal;
-    }
-    
-    
+        setInputValue(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent page refresh
+        onSearch(inputValue); // Send input value to parent component
+    };
+
     return (
         <div className="header ">
             <div className='header-left-items'>
@@ -18,23 +21,24 @@ function Header({inputValue, setInputValue}){
                 </div>
             </div>
             <div className="header-middle-items w3-container w3-bar">
-                <div className="input-box relative">
-                    <form  onSubmit={handleSubmit}>
-                    <input 
-                    type="text" 
-                    value={inputValue} 
-                    className="search-box" 
-                    placeholder="Search" 
-                    onChange={handleChange}
-                    />
-                    <div className="search-box ">
-                        <button type="submit" className="w3-gray w3-button">
-                        Search</button>
-                    </div>
-                    </form>
                 
-                </div>
             </div>
+            <div className="input-box relative">
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                            type="text" 
+                            value={inputValue} 
+                            className="search-box" 
+                            placeholder="Search" 
+                            onChange={handleChange}
+                        />
+                        <div className="search-box">
+                            <button type="submit" className="w3-gray w3-button">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
         </div>
     )
     
